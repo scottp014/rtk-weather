@@ -2,7 +2,7 @@ import { useDispatch } from "react-redux";
 import { useState } from "react";
 import { fetchWeather }  from "../store/slices/weatherSlice";
 
-
+// manages state of location and dispatches API call
 export const LocationInput = () => {
   const dispatch = useDispatch();
   const [location, setLocation] = useState('');
@@ -12,6 +12,7 @@ export const LocationInput = () => {
     dispatch(fetchWeather(location));
     setLocation('');
  };
+ // returns input field, submit button and table header to be seen by the user
   return (
  <div className="row" style={{textAlign: 'center'}}>
       <form>
