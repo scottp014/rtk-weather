@@ -11,7 +11,7 @@ const handleConditions = (location) => {
     pressure: [],
     humidity: [],
   }
-  // maps the passed in location and pushes the necessary conditions into the locationConditions object
+  // pushes the necessary conditions into the locationConditions object
   location.list.forEach((conditions) => {
     locationConditions.temp.push(conditions.main.temp);
     locationConditions.pressure.push(conditions.main.pressure);
