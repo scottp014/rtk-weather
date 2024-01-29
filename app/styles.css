@@ -1,0 +1,21 @@
+.row {
+  text-align: center;
+}
+
+.row td {
+  padding-top: 20px;
+}
+
+.row tr {
+  text-align: center;
+}
+
+.city-name {
+  font-weight: bold;
+  font-size: 1.1em;
+  margin-top: 35px;
+}
+
+.error-message {
+  color: red;
+}

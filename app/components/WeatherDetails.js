@@ -1,5 +1,6 @@
 import { useSelector } from "react-redux";
 import WeatherSparkLine from "./WeatherSparkLine";
+import '../styles.css';
 
 
 // function that creates an object of conditions for each new city added
@@ -20,7 +21,7 @@ const handleConditions = (location) => {
   return locationConditions;
 }
 
-// renders the conditions to be visible to the user, calls handleConditions to get specific conditions from the user added city
+// renders the conditions to be visible to the user, calls handleConditions to get specific conditions
 export const RenderConditions = () => {
   const locations = useSelector((state) => state.weather.locations)
   
@@ -31,8 +32,8 @@ export const RenderConditions = () => {
     return (
         <table key={condition.city.id} className="row">
           <tbody>
-          <tr className="row" style={{ textAlign: 'center', paddingTop: 20 }}>
-            <td className="col-md-3" style={{paddingTop: 35}}>{condition.city.name}</td>
+          <tr className="row">
+            <td className="city-name col-md-3">{condition.city.name}</td>
             <td className="col-md-3">
               <WeatherSparkLine data={conditionsData.temp} color="blue" />
               <p>{Math.round(conditionsData.temp[0])}°</p>
