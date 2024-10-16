@@ -27,14 +27,16 @@ export const LocationInput = () => {
  // returns input field, submit button and table header to be seen by the user
   return (
  <div className="row">
+    <h1 className="header">Five Day Forecast</h1>
       <form>
-    <br/>
-    <input id="input"
-      placeholder="Enter City Here" 
-      value={location} 
-      onChange={(event) => setLocation(event.target.value)}></input>
-    <button type="submit" onClick={LocationSubmit}>Search</button>
-  </form>
+      <br/>
+      <input id="input"
+        className="input"
+        placeholder="Enter City Here" 
+        value={location} 
+        onChange={(event) => setLocation(event.target.value)}></input>
+      <button type="submit" className="btn btn-dark btn-sm" onClick={LocationSubmit}>Search</button>
+      </form>
   
       <br/>
       <br/>

@@ -16,6 +16,15 @@
   margin-top: 35px;
 }
 
+.header {
+  margin-top: 15px;
+}
+
 .error-message {
   color: red;
+}
+
+.btn {
+  margin-left: 3px;
+  margin-top: -3px;
 }
