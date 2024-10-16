@@ -4,7 +4,7 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 // API call for user entered city name, had trouble hiding my API key in .env so left it here for now
 export const fetchWeather = createAsyncThunk('weather/fetchWeather', async (location) => {
   try {
-    const response = await axios.get(`http://api.openweathermap.org/data/2.5/forecast?q=${location}&units=imperial&appid=79a2d684772528c31363d342e6db9789`);
+    const response = await axios.get(`https://api.openweathermap.org/data/2.5/forecast?q=${location}&units=imperial&appid=79a2d684772528c31363d342e6db9789`);
     return response.data;
   } catch (error) {
     throw error; 
